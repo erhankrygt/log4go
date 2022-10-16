@@ -5,14 +5,15 @@ import (
 	"fmt"
 	"log"
 	"os"
+	"strings"
 )
 
 type ILog interface {
-	Debug(message string)
-	Info(message string)
-	Warn(message string)
-	Error(message string)
-	Fatal(message string)
+	Debug(messages ...string)
+	Info(messages ...string)
+	Warn(messages ...string)
+	Error(messages ...string)
+	Fatal(messages ...string)
 }
 
 var (
@@ -49,27 +50,28 @@ func NewLog(c Config, env string) ILog {
 	}
 }
 
-func (l Log) Debug(message string) {
-	l.writer(DEBUG, message)
+func (l Log) Debug(messages ...string) {
+	l.writer(DEBUG, messages)
 }
 
-func (l Log) Info(message string) {
-	l.writer(INFO, message)
+func (l Log) Info(messages ...string) {
+	l.writer(INFO, messages)
 }
 
-func (l Log) Warn(message string) {
-	l.writer(WARN, message)
+func (l Log) Warn(messages ...string) {
+	l.writer(WARN, messages)
 }
 
-func (l Log) Error(message string) {
-	l.writer(ERROR, message)
+func (l Log) Error(messages ...string) {
+	l.writer(ERROR, messages)
 }
 
-func (l Log) Fatal(message string) {
-	l.writer(FATAL, message)
+func (l Log) Fatal(messages ...string) {
+	l.writer(FATAL, messages)
 }
 
-func (l Log) writer(t string, m string) {
+func (l Log) writer(t string, m []string) {
 	logger := log.New(l.file, t, log.LstdFlags)
-	logger.Println(m)
+	me := strings.Join(m, ",")
+	logger.Println(me)
 }
