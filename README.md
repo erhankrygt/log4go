@@ -14,19 +14,19 @@ import (
 // Main function
 func main() {
 
-  	var lgo log.ILog
+  	var log4 log.ILog
 	{
-		lgo = log.NewLog(log.Config{FileName: "log4net"}, "prod")
-		if lgo == nil {
+		log4 = log.NewLog(log.Config{FileName: "log4net"}, "prod")
+		if log4 == nil {
 			_ = fmt.Errorf("initializing log failed")
 		}
 	}
 
-	lgo.Debug("Debug Message")
-	lgo.Warn("Warn Message")
-	lgo.Info("Info Message")
-	lgo.Error("Error Message")
-	lgo.Fatal("Fatal Message")
+	log4.Debug("Debug Message")
+	log4.Warn("Warn Message")
+	log4.Info("Info Message")
+	log4.Error("Error Message")
+	log4.Fatal("Fatal Message")
 
 }
 ```
