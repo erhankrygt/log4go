@@ -27,14 +27,13 @@ func main() {
 	lgo.Info("Info Message")
 	lgo.Error("Error Message")
 	lgo.Fatal("Fatal Message")
-    
 
-  //output
-  in log4net_prod.log file 
-  
 }
 ```
-  <img width="423" alt="image" src="https://user-images.githubusercontent.com/6412354/196023617-e183e152-6918-4131-b555-ace50ce8823d.png">
+# output
+in log4net_prod.log file 
+
+<img width="423" alt="image" src="https://user-images.githubusercontent.com/6412354/196023617-e183e152-6918-4131-b555-ace50ce8823d.png">
 
 # Installation
 ```
