@@ -14,7 +14,7 @@ import (
 // Main function
 func main() {
 
-  var lgo log.ILog
+  	var lgo log.ILog
 	{
 		lgo = log.NewLog(log.Config{FileName: "log4net"}, "prod")
 		if lgo == nil {
