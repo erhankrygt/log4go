@@ -16,7 +16,7 @@ func main() {
 
   	var log4 log.ILog
 	{
-		log4 = log.NewLog(log.Config{FileName: "log4net"}, "prod")
+		log4 = log.NewLog(log.Config{FileName: "log4go"}, "prod")
 		if log4 == nil {
 			_ = fmt.Errorf("initializing log failed")
 		}
@@ -31,7 +31,7 @@ func main() {
 }
 ```
 # output
-in log4net_prod.log file 
+in log4go_prod.log file 
 
 <img width="423" alt="image" src="https://user-images.githubusercontent.com/6412354/196023617-e183e152-6918-4131-b555-ace50ce8823d.png">
 
