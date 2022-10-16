@@ -22,7 +22,7 @@ func main() {
 		}
 	}
 
-	log4.Debug("Debug Message")
+	log4.Debug("Debug Message", "Debug Message 2")
 	log4.Warn("Warn Message")
 	log4.Info("Info Message")
 	log4.Error("Error Message")
@@ -33,7 +33,7 @@ func main() {
 # output
 in log4go_prod.log file 
 
-<img width="423" alt="image" src="https://user-images.githubusercontent.com/6412354/196023617-e183e152-6918-4131-b555-ace50ce8823d.png">
+<img width="599" alt="image" src="https://user-images.githubusercontent.com/6412354/196037697-928184d5-c67c-4d2d-bad0-bdc87afc9d69.png">
 
 # Installation
 ```
